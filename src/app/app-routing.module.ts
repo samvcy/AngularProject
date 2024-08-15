@@ -11,7 +11,7 @@ const routes: Routes = [
   {path : '',component: HomeComponent},
   {path : 'category', component : SingleCategoryComponent},
   {path : 'post',component: SinglePostComponent},
-  {path : 'term-condition',component: TermsAndConditionComponent},
+  {path : 'tnc',component: TermsAndConditionComponent},
   {path : 'contact', component: ContactUsComponent},
   {path : 'about',component: AboutUsComponent}
 ];

@@ -42,3 +42,11 @@ body {
     font-size: 13px;
     background-color: var(--primary-color);
 }
+
+.bg-secondry-theme{
+    background-color: var(--secondry-color);
+}
+
+.text-theme-primary{
+    color: var(--primary-color);
+}

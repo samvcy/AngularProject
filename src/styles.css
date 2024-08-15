@@ -35,3 +35,10 @@ body {
 .bg-theme{
     background-color: var(--primary-color);
 }
+
+.btn-theme{
+    height: 40px;
+    border: none;
+    font-size: 13px;
+    background-color: var(--primary-color);
+}

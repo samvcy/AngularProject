@@ -16,6 +16,13 @@ import { CommentsFormComponent } from './comment/comments-form/comments-form.com
 import { CommentsListComponent } from './comment/comments-list/comments-list.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { PostCardComponent } from './layouts/post-card/post-card.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+
+import { AngularFirestoreModule} from '@angular/fire/compat/firestore';
+import { AngularFireModule } from '@angular/fire/compat';
+
+import { environment } from '../environments/environment.development';
 
 @NgModule({
   declarations: [
@@ -36,9 +43,14 @@ import { PostCardComponent } from './layouts/post-card/post-card.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [],
+  providers: [
+    provideFirebaseApp(() => initializeApp({"projectId":"ang-vblog","appId":"1:31027168124:web:d5b9f236c58f6e77489af9","storageBucket":"ang-vblog.appspot.com","apiKey":"AIzaSyCgcBcNW1pQBaimF5ZNMURmblwAt9qKQpI","authDomain":"ang-vblog.firebaseapp.com","messagingSenderId":"31027168124"})),
+    provideFirestore(() => getFirestore())
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

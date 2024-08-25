@@ -1,4 +1,4 @@
-<div class="card shadow-effect" *ngIf="postData">
+<div class="card shadow-effect" *ngIf="postData" [routerLink]="['/post',postData.id]">
     <img src= "{{postData.data.postImgPath}}" alt="post-card" class="card-img-top">
 
     <div class="card-body">
@@ -7,7 +7,7 @@
         <small class="bg-light text-danger text-center ml-3"> Views - {{ postData.data.views }} </small>
         
         <h5 class="mt-1">{{postData.data.excerpt}}</h5>
-        <p>{{postData.data.content}}</p>
+        <p [innerHTML]="postData.data.content"></p>
 
         <small class="bg-light text-warning text-center ml-3">LAST UPDATED - {{postData.data.createdAt.toMillis() | date}}</small>
     </div>

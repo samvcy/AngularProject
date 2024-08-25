@@ -1,10 +1,11 @@
 export const environment = {
-    firebase:{
-        apiKey: "AIzaSyCgcBcNW1pQBaimF5ZNMURmblwAt9qKQpI",
-        authDomain: "ang-vblog.firebaseapp.com",
-        projectId: "ang-vblog",
-        storageBucket: "ang-vblog.appspot.com",
-        messagingSenderId: "31027168124",
-        appId: "1:31027168124:web:d5b9f236c58f6e77489af9"
+    production: true,
+    firebase: {
+        apiKey: "AIzaSyDuzgL1__ZdVmUKQ6LtznhIVv897M1tTsI",
+        authDomain: "ang-vblog-57223.firebaseapp.com",
+        projectId: "ang-vblog-57223",
+        storageBucket: "ang-vblog-57223.appspot.com",
+        messagingSenderId: "516170708023",
+        appId: "1:516170708023:web:8e582d2a8e8a6f5c59fbb2"
     }
 };

@@ -16,6 +16,7 @@ constructor(private router: ActivatedRoute,private postService :PostService){}
 
   ngOnInit(): void {
     this.router.params.subscribe(val => {
+    this.postService.countViews(val.id)
      this.postService.singlePostData(val.id).subscribe(post =>{
        this.singlePost = post
        this.similarPost(this.singlePost.category.categoryId)

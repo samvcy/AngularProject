@@ -1,12 +1,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-9">
-            <div class="card">
+            <div class="card shadow-effect">
                 <img src="{{singlePost.postImgPath}}"
                     alt="post-img" class="card-img-top img-fluid">
                 <div class="card-body">
                     <small class="bg-light text-danger text-center"> {{singlePost.category.category}} </small>
-                    <small class="bg-light text-success text-center ml-3"> Featured </small>
+                    <small class="bg-light text-success text-center ml-3" *ngIf="singlePost.isFeatured"> Featured </small>
                     <small class="bg-light text-info text-center ml-3">Views - {{singlePost.views}} </small>
                     <small class="bg-light text-warning text-center ml-3"> LAST UPDATED - {{singlePost.createdAt.toMillis() | date}}</small>
 

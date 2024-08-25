@@ -2,13 +2,13 @@
     <img src= "{{postData.data.postImgPath}}" alt="post-card" class="card-img-top">
 
     <div class="card-body">
-        <small class="bg-light text-danger text-center"> {{ postData.data.category }} </small>
+        <small class="bg-light text-danger text-center"> {{ postData.data.category.category }} </small>
         <small class="bg-light text-danger text-center ml-3"> Feature </small>
         <small class="bg-light text-danger text-center ml-3"> Views - {{ postData.data.views }} </small>
         
         <h5 class="mt-1">{{postData.data.excerpt}}</h5>
         <p>{{postData.data.content}}</p>
 
-        <small class="bg-light text-warning text-center ml-3">LAST UPDATED - {{postData.data.createdAt}}</small>
+        <small class="bg-light text-warning text-center ml-3">LAST UPDATED - {{postData.data.createdAt.toMillis() | date}}</small>
     </div>
 </div>

@@ -11,22 +11,23 @@ export class PostCardComponent implements OnInit{
 
   //postArray :Record<any, Object> = {};
 
-  @Input() postData: Post = {
-    data: {},
-    title: '',
-    permalink: '',
-    category: {
-      categoryId: '',
-      category: ''
-    },
-    postImgPath: '',
-    excerpt: '',
-    content: '',
-    isFeatured: false,
-    views: 0,
-    status: '',
-    createdAt: undefined
-  };
+  @Input() postData: any
+  //Post = {
+  //   data: {},
+  //   title: '',
+  //   permalink: '',
+  //   category: {
+  //     categoryId: '',
+  //     category: ''
+  //   },
+  //   postImgPath: '',
+  //   excerpt: '',
+  //   content: '',
+  //   isFeatured: false,
+  //   views: 0,
+  //   status: '',
+  //   createdAt: undefined
+ // };
 
   constructor(){}
 

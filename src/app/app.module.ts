@@ -25,6 +25,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment.development';
 
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [
     provideFirebaseApp(() => initializeApp({"projectId":"ang-vblog","appId":"1:31027168124:web:d5b9f236c58f6e77489af9","storageBucket":"ang-vblog.appspot.com","apiKey":"AIzaSyCgcBcNW1pQBaimF5ZNMURmblwAt9qKQpI","authDomain":"ang-vblog.firebaseapp.com","messagingSenderId":"31027168124"})),

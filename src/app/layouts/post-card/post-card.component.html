@@ -1,14 +1,18 @@
-<div class="card shadow-effect" *ngIf="postData" [routerLink]="['/post',postData.id]">
+<div class="shadow-effect card " style="max-height: 500px;" *ngIf="postData" [routerLink]="['/post',postData.id]">
     <img src= "{{postData.data.postImgPath}}" alt="post-card" class="card-img-top">
 
-    <div class="card-body">
-        <small class="bg-light text-danger text-center"> {{ postData.data.category.category }} </small>
-        <small class="bg-light text-danger text-center ml-3" *ngIf="postData.data.isFeatured"> Feature </small>
-        <small class="bg-light text-danger text-center ml-3"> Views - {{ postData.data.views }} </small>
-        
+    <div class="card-body cardOver">
+        <small class="bg-light text-danger text-center"> {{ postData.data.category.category }} </small> &nbsp;
+        <small class="bg-light text-danger text-center ml-3" *ngIf="postData.data.isFeatured"> Feature </small> &nbsp;
+        <small class="bg-light text-danger text-center ml-3 fa-solid fa-eye"> <i class="fa-solid fa-eye"></i>Views - {{ postData.data.views }} </small>
+        <div>
+            <p class="card-text"><small class="bg-light text-muted">LAST UPDATED - {{postData.data.createdAt.toMillis() | date}}</small></p>
+        </div>
+
         <h5 class="mt-1">{{postData.data.excerpt}}</h5>
         <p [innerHTML]="postData.data.content"></p>
 
-        <small class="bg-light text-warning text-center ml-3">LAST UPDATED - {{postData.data.createdAt.toMillis() | date}}</small>
     </div>
+    <div><br></div>
 </div>
+

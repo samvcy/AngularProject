@@ -1,5 +1,16 @@
 {
   "projects": {
     "default": "ang-vblog"
-  }
+  },
+  "targets": {
+    "ang-vblog": {
+      "hosting": {
+        "angBlogApps": [
+          "ang-blog-baseui"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
